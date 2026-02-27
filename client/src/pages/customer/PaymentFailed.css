@@ -1,0 +1,311 @@
+/* Payment Failed Page Styles */
+
+.failed-page {
+  background: linear-gradient(135deg, #ee5a6f 0%, #f29263 100%);
+}
+
+/* Error Animation */
+.error-animation {
+  margin-bottom: 30px;
+}
+
+.error-icon {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+.error-x {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  border-radius: 50%;
+  box-sizing: content-box;
+  border: 4px solid #f44336;
+}
+
+.x-line {
+  height: 6px;
+  background-color: #f44336;
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  top: 57px;
+  width: 60px;
+}
+
+.x-line.x-left {
+  left: 25px;
+  transform: rotate(45deg);
+  animation: x-left 0.75s;
+}
+
+.x-line.x-right {
+  right: 25px;
+  transform: rotate(-45deg);
+  animation: x-right 0.75s;
+}
+
+.error-circle {
+  top: -4px;
+  left: -4px;
+  z-index: 10;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  box-sizing: content-box;
+  border: 4px solid rgba(244, 67, 54, 0.3);
+}
+
+@keyframes x-left {
+  0% {
+    width: 0;
+    left: 60px;
+  }
+  50% {
+    width: 0;
+    left: 60px;
+  }
+  100% {
+    width: 60px;
+    left: 25px;
+  }
+}
+
+@keyframes x-right {
+  0% {
+    width: 0;
+    right: 60px;
+  }
+  50% {
+    width: 0;
+    right: 60px;
+  }
+  100% {
+    width: 60px;
+    right: 25px;
+  }
+}
+
+/* Error Content */
+.error-title {
+  font-size: 32px;
+  color: #d32f2f;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.error-message {
+  font-size: 16px;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  padding: 15px;
+  background: #ffebee;
+  border-radius: 8px;
+  border-left: 4px solid #f44336;
+}
+
+/* Failed Amount */
+.failed-amount {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.failed-amount p {
+  margin: 0 0 10px 0;
+  color: #666;
+  font-weight: 600;
+}
+
+.amount-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.amount-display .amount-usd {
+  font-size: 28px;
+  font-weight: 700;
+  color: #d32f2f;
+}
+
+.amount-display .amount-inr {
+  font-size: 16px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Failure Reasons */
+.failure-reasons {
+  text-align: left;
+  background: #fff8e1;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  border-left: 4px solid #ff9800;
+}
+
+.failure-reasons h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #e65100;
+}
+
+.failure-reasons ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.failure-reasons li {
+  padding: 8px 0;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Help Section */
+.help-section {
+  text-align: left;
+  margin: 30px 0;
+}
+
+.help-section h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.help-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.help-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.help-option:hover {
+  border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+  transform: translateY(-2px);
+}
+
+.option-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.help-option div h4 {
+  margin: 0 0 5px 0;
+  font-size: 15px;
+  color: #2c3e50;
+}
+
+.help-option div p {
+  margin: 0;
+  font-size: 13px;
+  color: #7f8c8d;
+  line-height: 1.4;
+}
+
+/* Important Note */
+.important-note {
+  background: #e3f2fd;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin: 25px 0;
+  text-align: left;
+  color: #1565c0;
+  font-size: 14px;
+  line-height: 1.6;
+  border-left: 4px solid #2196f3;
+}
+
+.important-note strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+/* Support Info for Failed Page */
+.failed-page .support-info {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.failed-page .support-info strong {
+  color: #2c3e50;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .error-title {
+    font-size: 24px;
+  }
+
+  .error-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .error-x {
+    width: 80px;
+    height: 80px;
+  }
+
+  .x-line {
+    top: 37px;
+    width: 40px;
+  }
+
+  .x-line.x-left {
+    left: 17px;
+  }
+
+  .x-line.x-right {
+    right: 17px;
+  }
+
+  .help-options {
+    grid-template-columns: 1fr;
+  }
+
+  @keyframes x-left {
+    0%, 50% {
+      width: 0;
+      left: 40px;
+    }
+    100% {
+      width: 40px;
+      left: 17px;
+    }
+  }
+
+  @keyframes x-right {
+    0%, 50% {
+      width: 0;
+      right: 40px;
+    }
+    100% {
+      width: 40px;
+      right: 17px;
+    }
+  }
+}

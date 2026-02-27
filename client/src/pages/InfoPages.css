@@ -1,0 +1,157 @@
+.info-page {
+  min-height: 100vh;
+  background: #000000;
+  color: white;
+  padding-top: 80px;
+}
+
+.info-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 60px 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.info-header h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+}
+
+.info-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+  line-height: 1.8;
+}
+
+.info-content h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 40px 0 20px;
+  color: white;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 10px;
+}
+
+.info-content h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 25px 0 15px;
+  color: #667eea;
+}
+
+.info-content p {
+  margin: 15px 0;
+  color: #dddddd;
+  font-size: 16px;
+}
+
+.info-content ul,
+.info-content ol {
+  margin: 20px 0;
+  padding-left: 30px;
+  color: #dddddd;
+}
+
+.info-content li {
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+.info-content li strong {
+  color: white;
+  font-weight: 600;
+}
+
+.faq-item {
+  background: rgba(102, 126, 234, 0.05);
+  border-left: 4px solid #667eea;
+  padding: 20px;
+  margin: 25px 0;
+  border-radius: 8px;
+}
+
+.faq-item h4 {
+  margin-top: 0;
+  color: white;
+  font-size: 18px;
+}
+
+.faq-item p {
+  margin-bottom: 0;
+}
+
+.step-guide {
+  margin: 30px 0;
+}
+
+.step {
+  background: rgba(118, 75, 162, 0.1);
+  border-left: 4px solid #764ba2;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+.step h4 {
+  margin-top: 0;
+  color: #764ba2;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.step p {
+  margin-bottom: 0;
+}
+
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 15px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(102, 126, 234, 0.5);
+}
+
+.legal-update {
+  font-size: 14px;
+  color: #888;
+  font-style: italic;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .info-header h1 {
+    font-size: 32px;
+  }
+
+  .info-content {
+    padding: 30px 15px 60px;
+  }
+
+  .info-content h3 {
+    font-size: 24px;
+  }
+
+  .info-content h4 {
+    font-size: 18px;
+  }
+
+  .info-content p,
+  .info-content li {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,93 @@
+/* Global Image Styles for Better Visibility */
+
+/* Ensure all images have proper display properties */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  opacity: 1 !important; /* Force full opacity */
+  visibility: visible !important; /* Ensure visibility */
+}
+
+/* Loading animation for images */
+@keyframes imageLoad {
+  from {
+    opacity: 0.3;
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+img[src] {
+  animation: imageLoad 0.3s ease-in-out;
+}
+
+/* Fallback for broken images */
+img::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+}
+
+/* Loading placeholder for lazy-loaded images */
+img[loading="lazy"] {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+  min-height: 200px;
+}
+
+/* Smooth transitions for image hover effects */
+img {
+  transition: transform 0.3s ease, filter 0.2s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+/* Ensure images don't exceed their container */
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Better image rendering for clarity */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  image-rendering: auto;
+  -ms-interpolation-mode: bicubic; /* IE fix */
+}
+
+/* High quality rendering for modern browsers */
+@supports (image-rendering: -webkit-optimize-contrast) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* Prevent layout shift while images load */
+img {
+  width: 100%;
+  background-color: rgba(26, 26, 46, 0.5);
+}
+
+/* Ensure loaded images are fully visible */
+img.loaded,
+img[complete] {
+  opacity: 1 !important;
+  filter: none;
+}

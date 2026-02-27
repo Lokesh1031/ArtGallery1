@@ -1,0 +1,411 @@
+/* Payment Success Page Styles */
+
+.payment-result-page {
+  min-height: 100vh;
+  padding: 100px 20px 60px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.payment-result-page .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.result-card {
+  background: white;
+  border-radius: 20px;
+  padding: 50px 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Success Animation */
+.success-animation {
+  margin-bottom: 30px;
+}
+
+.success-checkmark {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+.check-icon {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  border-radius: 50%;
+  box-sizing: content-box;
+  border: 4px solid #4CAF50;
+}
+
+.icon-line {
+  height: 6px;
+  background-color: #4CAF50;
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+}
+
+.icon-line.line-tip {
+  top: 56px;
+  left: 22px;
+  width: 30px;
+  transform: rotate(45deg);
+  animation: icon-line-tip 0.75s;
+}
+
+.icon-line.line-long {
+  top: 50px;
+  right: 12px;
+  width: 60px;
+  transform: rotate(-45deg);
+  animation: icon-line-long 0.75s;
+}
+
+.icon-circle {
+  top: -4px;
+  left: -4px;
+  z-index: 10;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  box-sizing: content-box;
+  border: 4px solid rgba(76, 175, 80, 0.3);
+}
+
+.icon-fix {
+  top: 12px;
+  width: 8px;
+  left: 34px;
+  z-index: 1;
+  height: 110px;
+  position: absolute;
+  transform: rotate(-45deg);
+  background-color: white;
+}
+
+@keyframes icon-line-tip {
+  0% {
+    width: 0;
+    left: 2px;
+    top: 24px;
+  }
+  54% {
+    width: 0;
+    left: 2px;
+    top: 24px;
+  }
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 36px;
+  }
+  84% {
+    width: 22px;
+    left: 26px;
+    top: 60px;
+  }
+  100% {
+    width: 30px;
+    left: 22px;
+    top: 56px;
+  }
+}
+
+@keyframes icon-line-long {
+  0% {
+    width: 0;
+    right: 46px;
+    top: 66px;
+  }
+  65% {
+    width: 0;
+    right: 46px;
+    top: 66px;
+  }
+  84% {
+    width: 60px;
+    right: 0px;
+    top: 46px;
+  }
+  100% {
+    width: 60px;
+    right: 12px;
+    top: 50px;
+  }
+}
+
+/* Success Content */
+.success-title {
+  font-size: 32px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.success-message {
+  font-size: 16px;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.payment-details {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row .label {
+  font-weight: 600;
+  color: #666;
+  font-size: 14px;
+}
+
+.detail-row .value {
+  color: #2c3e50;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+}
+
+.amount-paid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.amount-usd {
+  font-size: 20px;
+  font-weight: 700;
+  color: #27ae60;
+}
+
+.amount-inr {
+  font-size: 14px;
+  color: #666;
+}
+
+.success-badge {
+  background: #d4edda;
+  color: #155724;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-weight: 600 !important;
+  font-family: inherit !important;
+}
+
+/* Ordered Items */
+.ordered-items {
+  margin: 30px 0;
+  text-align: left;
+}
+
+.ordered-items h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.order-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.order-item .item-info {
+  flex: 1;
+}
+
+.order-item .item-info h4 {
+  margin: 0 0 5px 0;
+  font-size: 15px;
+  color: #2c3e50;
+}
+
+.order-item .item-info p {
+  margin: 0;
+  font-size: 13px;
+  color: #7f8c8d;
+}
+
+.order-item .item-amount {
+  font-weight: 700;
+  color: #667eea;
+  font-size: 16px;
+}
+
+/* Next Steps */
+.next-steps {
+  margin: 30px 0;
+  text-align: left;
+}
+
+.next-steps h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.steps-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.step-number {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.step-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.action-buttons .btn {
+  padding: 14px 30px;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.action-buttons .btn-primary {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.action-buttons .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.action-buttons .btn-secondary {
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.action-buttons .btn-secondary:hover {
+  background: #667eea;
+  color: white;
+}
+
+/* Support Info */
+.support-info {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+.support-info a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.support-info a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .result-card {
+    padding: 30px 20px;
+  }
+
+  .success-title {
+    font-size: 24px;
+  }
+
+  .success-checkmark {
+    width: 80px;
+    height: 80px;
+  }
+
+  .check-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .steps-list {
+    grid-template-columns: 1fr;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .action-buttons .btn {
+    width: 100%;
+  }
+}

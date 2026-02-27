@@ -1,0 +1,622 @@
+/* Artwork Detail Page Styles */
+.artwork-detail-page {
+  min-height: 100vh;
+  background: #000;
+  padding: 100px 20px 60px;
+  color: white;
+}
+
+.back-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.artwork-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Artwork Images Section */
+.artwork-images-section {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.main-artwork-image {
+  position: relative;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid rgba(102, 126, 234, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.main-artwork-image img {
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+  max-height: 800px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  background: #1a1a2e;
+  opacity: 1 !important;
+  filter: brightness(1) contrast(1.02);
+  image-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  will-change: auto;
+}
+
+.watermark-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.view-options {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-view-option {
+  flex: 1;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-view-option:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Artwork Details Section */
+.artwork-header h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.artwork-meta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.category-badge {
+  background: rgba(102, 126, 234, 0.2);
+  color: #667eea;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid rgba(102, 126, 234, 0.4);
+}
+
+.bidding-badge {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.bidding-badge.pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Artist Info */
+.artist-info {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.artist-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+.artist-info h3 {
+  color: white;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.view-artist-btn {
+  background: none;
+  border: none;
+  color: #667eea;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.view-artist-btn:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* Price Section */
+.price-section {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  border: 2px solid rgba(102, 126, 234, 0.3);
+}
+
+.price-display {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.price-label {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.price-amounts {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.price-amount {
+  font-size: 48px;
+  font-weight: 700;
+  color: #667eea;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+}
+
+.price-amount-inr {
+  font-size: 24px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: -5px;
+}
+
+.btn-wishlist {
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 180px;
+}
+
+.btn-wishlist:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-wishlist.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-color: rgba(255, 255, 255, 0.6);
+  animation: heartbeat 0.5s ease;
+}
+
+.btn-learn {
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: 2px solid rgba(79, 172, 254, 0.5);
+  background: linear-gradient(135deg, rgba(79, 172, 254, 0.2), rgba(0, 242, 254, 0.2));
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 180px;
+}
+
+.btn-learn:hover {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  border-color: rgba(79, 172, 254, 0.8);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(79, 172, 254, 0.4);
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.bid-info {
+  display: flex;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.bid-form {
+  display: flex;
+  gap: 10px;
+}
+
+.bid-form input {
+  flex: 1;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 16px 32px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Tabs */
+.details-tabs {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tabs-header {
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 18px 20px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tab-btn:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.tab-btn.active {
+  color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.tabs-content {
+  padding: 30px;
+}
+
+.tab-panel h3 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.tab-panel h4 {
+  color: #667eea;
+  font-size: 18px;
+  margin: 25px 0 15px;
+}
+
+.tab-panel p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.artwork-specs {
+  display: grid;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.spec-label {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+}
+
+.spec-value {
+  color: white;
+}
+
+.status-available {
+  color: #4caf50;
+  font-weight: 700;
+}
+
+/* Reviews */
+.review-form {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.review-form h4 {
+  margin-top: 0;
+}
+
+.rating-input {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.rating-input label {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+}
+
+.rating-input select {
+  flex: 1;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+}
+
+.review-form textarea {
+  width: 100%;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  resize: vertical;
+  margin-bottom: 15px;
+}
+
+.reviews-list {
+  display: grid;
+  gap: 20px;
+}
+
+.review-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.review-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(102, 126, 234, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.reviewer-name {
+  font-weight: 600;
+  color: white;
+}
+
+.verified-purchase-badge {
+  display: inline-block;
+  font-size: 0.85em;
+  color: #4CAF50;
+  background: rgba(76, 175, 80, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  white-space: nowrap;
+}
+
+.review-ratings {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.review-rating {
+  color: #ffd700;
+}
+
+.review-comment {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.review-date {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+.no-reviews {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 40px 20px;
+}
+
+/* Success message animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Full size modal close button animation */
+.full-size-modal button:active {
+  transform: scale(0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .artwork-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .artwork-images-section {
+    position: relative;
+    top: 0;
+  }
+
+  .artwork-header h1 {
+    font-size: 32px;
+  }
+
+  .tabs-header {
+    flex-wrap: wrap;
+  }
+
+  .tab-btn {
+    flex: 1 1 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .price-amount {
+    font-size: 36px;
+  }
+
+  .view-options {
+    flex-direction: column;
+  }
+}
