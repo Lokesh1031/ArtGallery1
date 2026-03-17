@@ -59,7 +59,7 @@ const testCommission = async () => {
     const [expensiveArtworks] = await connection.query(`
       SELECT id, title, price
       FROM artworks
-      WHERE price > 500000
+      WHERE price >= 100000
       LIMIT 5
     `);
 

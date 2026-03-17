@@ -168,12 +168,12 @@ exports.createArtwork = async (req, res) => {
       });
     }
 
-    // Validate price cap (max ₹5 lakh)
-    if (parseFloat(price) > 500000) {
+    // Validate price cap (max ₹99,999)
+    if (parseFloat(price) >= 100000) {
       console.log('Validation failed: Price exceeds maximum limit');
       return res.status(400).json({
         success: false,
-        message: 'Price cannot exceed ₹5,00,000 (5 lakh rupees)'
+        message: 'Price cannot exceed ₹99,999'
       });
     }
 
@@ -273,11 +273,11 @@ exports.updateArtwork = async (req, res) => {
       dimensions, year_created, provenance, bidding_enabled
     } = req.body;
 
-    // Validate price cap (max ₹5 lakh)
-    if (price && parseFloat(price) > 500000) {
+    // Validate price cap (max ₹99,999)
+    if (price && parseFloat(price) >= 100000) {
       return res.status(400).json({
         success: false,
-        message: 'Price cannot exceed ₹5,00,000 (5 lakh rupees)'
+        message: 'Price cannot exceed ₹99,999'
       });
     }
 

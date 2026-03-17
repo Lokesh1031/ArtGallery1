@@ -218,7 +218,8 @@ exports.getUserBids = async (req, res) => {
              u.full_name as artist_name
       FROM bids b
       LEFT JOIN artworks a ON b.artwork_id = a.id
-      LEFT JOIN users u ON a.artist_id = u.id
+      LEFT JOIN artists ar ON a.artist_id = ar.id
+      LEFT JOIN users u ON ar.user_id = u.id
       WHERE b.customer_id = ?
       ORDER BY b.created_at DESC
     `, [userId]);
