@@ -1,0 +1,45 @@
+services:
+  # Backend Web Service
+  - type: web
+    name: artgallery-backend
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: cd server && npm install
+    startCommand: cd server && node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: DB_HOST
+        fromDatabase:
+          name: artgallery-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: artgallery-db
+          property: port
+      - key: DB_USER
+        fromDatabase:
+          name: artgallery-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: artgallery-db
+          property: password
+      - key: DB_NAME
+        fromDatabase:
+          name: artgallery-db
+          property: database
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CLIENT_URL
+        sync: false
+    healthCheckPath: /api/health
+
+databases:
+  # MySQL Database
+  - name: artgallery-db
+    databaseName: art_gallery_db
+    plan: free
